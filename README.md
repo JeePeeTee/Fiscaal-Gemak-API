@@ -1,2 +1,2 @@
 # Fiscaal-Gemak-API
-Fiscaal Gemak API using OpenApi 3.0
+Fiscaal Gemak API based on OpenApi 3.0
