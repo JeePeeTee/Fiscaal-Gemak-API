@@ -33,8 +33,10 @@ All URIs are relative to *https://api-app.fiscaalgemak.nl*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**AddClient**](docs/DefaultApi.md#addclient) | **POST** /client | adds a new client
+*DefaultApi* | [**DeleteClient**](docs/DefaultApi.md#deleteclient) | **DELETE** /client/{id} | delete an existing client
+*DefaultApi* | [**GetClient**](docs/DefaultApi.md#getclient) | **GET** /client/{id} | reads client data by ID
 *DefaultApi* | [**GetClients**](docs/DefaultApi.md#getclients) | **GET** /client | reads all customer data
-*DefaultApi* | [**GetCustomer**](docs/DefaultApi.md#getcustomer) | **GET** /client/{id} | reads customer data by ID
+*DefaultApi* | [**UpdateClient**](docs/DefaultApi.md#updateclient) | **PUT** /client/{id} | update client data by ID
 
 <a name="documentation-for-models"></a>
 ## Documentation for Models
