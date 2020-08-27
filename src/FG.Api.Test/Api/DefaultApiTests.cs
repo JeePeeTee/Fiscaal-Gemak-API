@@ -51,7 +51,11 @@ namespace FG.Api.Test {
         [SetUp]
         public void Init() {
             instance = new DefaultApi();
-            instance.Configuration.DefaultHeader.Add("U4-API-KEY", "<your api key here>");
+
+            // ToDo Replace me!!
+            const string apiKey = "your api key here";
+
+            instance.Configuration.DefaultHeader.Add("Authorization", $"U4-API-KEY {apiKey}");
         }
 
         /// <summary>
