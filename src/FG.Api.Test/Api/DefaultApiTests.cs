@@ -51,6 +51,7 @@ namespace FG.Api.Test {
         [SetUp]
         public void Init() {
             instance = new DefaultApi();
+            instance.Configuration.DefaultHeader.Add("U4-API-KEY", "<your api key here>");
         }
 
         /// <summary>
@@ -74,6 +75,16 @@ namespace FG.Api.Test {
         }
 
         /// <summary>
+        /// Test DeleteClient
+        /// </summary>
+        [Test]
+        public void DeleteClientTest() {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? id = null;
+            //instance.DeleteClient(id);
+        }
+
+        /// <summary>
         /// Test GetClients
         /// </summary>
         [Test]
@@ -84,13 +95,13 @@ namespace FG.Api.Test {
         }
 
         /// <summary>
-        /// Test GetCustomer
+        /// Test GetClient
         /// </summary>
         [Test]
-        public void GetCustomerTest() {
+        public void GetClientTest() {
             // TODO uncomment below to test the method and replace null with proper value
             //int? id = null;
-            //var response = instance.GetCustomer(id);
+            //var response = instance.GetClient(id);
             //Assert.IsInstanceOf<ModelClient> (response, "response is ModelClient");
         }
 
@@ -101,6 +112,18 @@ namespace FG.Api.Test {
         public void InstanceTest() {
             // TODO uncomment below to test 'IsInstanceOfType' DefaultApi
             //Assert.IsInstanceOfType(typeof(DefaultApi), instance, "instance is a DefaultApi");
+        }
+
+        /// <summary>
+        /// Test UpdateClient
+        /// </summary>
+        [Test]
+        public void UpdateClientTest() {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ModelClient body = null;
+            //int? id = null;
+            //var response = instance.UpdateClient(body, id);
+            //Assert.IsInstanceOf<ModelClient> (response, "response is ModelClient");
         }
     }
 }

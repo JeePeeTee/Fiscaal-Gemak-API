@@ -5,8 +5,10 @@ All URIs are relative to *https://api-app.fiscaalgemak.nl*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AddClient**](DefaultApi.md#addclient) | **POST** /client | adds a new client
+[**DeleteClient**](DefaultApi.md#deleteclient) | **DELETE** /client/{id} | delete an existing client
+[**GetClient**](DefaultApi.md#getclient) | **GET** /client/{id} | reads client data by ID
 [**GetClients**](DefaultApi.md#getclients) | **GET** /client | reads all customer data
-[**GetCustomer**](DefaultApi.md#getcustomer) | **GET** /client/{id} | reads customer data by ID
+[**UpdateClient**](DefaultApi.md#updateclient) | **PUT** /client/{id} | update client data by ID
 
 <a name="addclient"></a>
 # **AddClient**
@@ -73,6 +75,135 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="deleteclient"></a>
+# **DeleteClient**
+> void DeleteClient (int? id)
+
+delete an existing client
+
+Delete an existing client by ID
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using FG.Api.Api;
+using FG.Api.Client;
+using FG.Api.Model;
+
+namespace Example
+{
+    public class DeleteClientExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: ApiKeyAuth
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new DefaultApi();
+            var id = 56;  // int? | Pass client ID for updateing client data.
+
+            try
+            {
+                // delete an existing client
+                apiInstance.DeleteClient(id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DefaultApi.DeleteClient: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int?**| Pass client ID for updateing client data. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="getclient"></a>
+# **GetClient**
+> ModelClient GetClient (int? id)
+
+reads client data by ID
+
+This operation retrieves client by its ID. The operation uses the client ID to identify a client in a query string.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using FG.Api.Api;
+using FG.Api.Client;
+using FG.Api.Model;
+
+namespace Example
+{
+    public class GetClientExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: ApiKeyAuth
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new DefaultApi();
+            var id = 56;  // int? | Pass client ID for retrieving client data.
+
+            try
+            {
+                // reads client data by ID
+                ModelClient result = apiInstance.GetClient(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DefaultApi.GetClient: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int?**| Pass client ID for retrieving client data. | 
+
+### Return type
+
+[**ModelClient**](ModelClient.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="getclients"></a>
 # **GetClients**
 > List<ModelClient> GetClients ()
@@ -134,13 +265,13 @@ This endpoint does not need any parameter.
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="getcustomer"></a>
-# **GetCustomer**
-> ModelClient GetCustomer (int? id)
+<a name="updateclient"></a>
+# **UpdateClient**
+> ModelClient UpdateClient (ModelClient body, int? id)
 
-reads customer data by ID
+update client data by ID
 
-This operation retrieves customer by its ID. The operation uses the customer ID to identify a customer in a query string.
+This operation updates client by its ID. The operation uses the client ID to identify a client in a query string.
 
 ### Example
 ```csharp
@@ -152,7 +283,7 @@ using FG.Api.Model;
 
 namespace Example
 {
-    public class GetCustomerExample
+    public class UpdateClientExample
     {
         public void main()
         {
@@ -162,17 +293,18 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new DefaultApi();
-            var id = 56;  // int? | Pass customer ID for retrieving customer data.
+            var body = new ModelClient(); // ModelClient | New client data
+            var id = 56;  // int? | Pass client ID for updateing client data.
 
             try
             {
-                // reads customer data by ID
-                ModelClient result = apiInstance.GetCustomer(id);
+                // update client data by ID
+                ModelClient result = apiInstance.UpdateClient(body, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DefaultApi.GetCustomer: " + e.Message );
+                Debug.Print("Exception when calling DefaultApi.UpdateClient: " + e.Message );
             }
         }
     }
@@ -183,7 +315,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| Pass customer ID for retrieving customer data. | 
+ **body** | [**ModelClient**](ModelClient.md)| New client data | 
+ **id** | **int?**| Pass client ID for updateing client data. | 
 
 ### Return type
 
@@ -195,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -81,7 +81,7 @@ Contact: jpt@sultancrm.nl
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\FG.Api\FG.Api.csproj">
-          <Project>{CD479FAC-EC95-4F31-9919-98A3332F24BF}</Project>
+          <Project>{31B7823D-F135-4097-AE0F-7F06B13DDCFD}</Project>
           <Name>FG.Api</Name>
       </ProjectReference>
   </ItemGroup>
