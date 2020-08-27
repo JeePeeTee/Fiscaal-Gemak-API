@@ -1,6 +1,6 @@
 # Fiscaal-Gemak-API
 
-Fiscaal Gemak client API based on OpenApi 3.0
+Fiscaal Gemak API client based on OpenApi 3.0
 
 - API version: 1.0.0
 - SDK version: 1.0.0
