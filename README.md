@@ -1,4 +1,3 @@
-<meta name="google-site-verification" content="FdqFTjXOfR5wNXa5SdWI1xyQMRnCM90Po5eP6X51O28" />
 # Fiscaal-Gemak-API
 
 Fiscaal Gemak API client based on OpenApi 3.0
@@ -55,3 +54,5 @@ Class | Method | HTTP request | Description
 - **Type**: API key
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
+
+<meta name="google-site-verification" content="FdqFTjXOfR5wNXa5SdWI1xyQMRnCM90Po5eP6X51O28" />
