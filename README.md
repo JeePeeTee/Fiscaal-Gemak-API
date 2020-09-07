@@ -8,8 +8,10 @@ Fiscaal Gemak API client based on OpenApi 3.0
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
+- .NET Core 1.0 or later
 - .NET 4.0 or later
-- Windows Phone 7.1 (Mango)
+- Mono/Xamarin vNext or later
+- UWP 10.0 or later
 
 <a name="dependencies"></a>
 ## Dependencies
